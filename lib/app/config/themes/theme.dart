@@ -10,6 +10,10 @@ const List<Color> _colorTheme=[
   Color(0xFF65A69F),
   Color(0xFF9BBFBC),
   Color(0xFFF0F1F2),
+  Color(0xFFF6ACF9),
+  Color(0xFFACB6F9),
+  Color(0xFF000000),
+
 ];
 
 class AppTheme{
@@ -39,4 +43,3 @@ class AppTheme{
     );
   }
 }
-
