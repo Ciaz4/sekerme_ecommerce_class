@@ -13,7 +13,7 @@ class LoginDivider extends StatelessWidget {
 
         ),
         Padding(padding:const EdgeInsets.all(8.0),
-          child: Text('Or login with',
+          child: Text('O inicia sesion con',
             style:TextStyle(
               color: Theme.of(context).colorScheme.primary,
             ),

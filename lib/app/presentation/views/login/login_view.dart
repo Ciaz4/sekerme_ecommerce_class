@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:sekerme_ecommerce/app/presentation/views/login/widgets/login_divider.dart';
-import 'package:sekerme_ecommerce/app/presentation/views/register/register_view.dart';
-import 'package:sekerme_ecommerce/app/presentation/widgets/from_text_field.dart';
-import 'package:sekerme_ecommerce/app/presentation/widgets/my_button_from.dart';
-import 'package:sekerme_ecommerce/app/presentation/widgets/my_social_button.dart';
+import 'package:sekerme_ecommerce/app/presentation/widgets/links_common_widgets.dart';
 class LoginView extends StatelessWidget {
 
   static const String name = 'login_view';
+  final _emailAdress = TextEditingController();
+  final _visiblePassword = TextEditingController();
 
-  const LoginView({super.key});
+  LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,22 +37,24 @@ class LoginView extends StatelessWidget {
                   const SizedBox(height: 20,),
 
 
-                  const FormTextField(
+                   FormTextField(
                     labelText: 'Correo Electronico',
                     hintText: 'Ingrese su correo',
                     textInputType: TextInputType.emailAddress,
                     obscureText: false,
                     suffixIcon: false,
+                    controller: _emailAdress,
 
                   ),
                   const SizedBox(height: 20,),
 
-                  const FormTextField(
+                   FormTextField(
                     labelText: 'Contraseña',
                     hintText: 'Ingrese su contraseña',
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
                     suffixIcon: false,
+                    controller: _visiblePassword,
 
                   ),
                   Padding(
@@ -79,7 +79,9 @@ class LoginView extends StatelessWidget {
 
                   MyButtonForm(
                     text: 'Iniciar sesion',
-                    onTab: (){},
+                    onTab: (){
+
+                    },
 
                   ),
                   const SizedBox(height: 20,),
